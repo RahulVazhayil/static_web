@@ -15,3 +15,10 @@ def home(request):
 
     return   render(request,'index.html',{'result':obj,'results':obj1,'img':obj2,'ftimg':obj3})
 
+
+def details(request,place_id):
+    obj=Place.objects.get(id=place_id)
+
+    return render(request,'details.html',{'result':obj})
+
+
